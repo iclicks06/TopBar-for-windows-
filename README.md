@@ -27,3 +27,16 @@ Prerequisites
 .NET compatible environment
 
 C# desktop framework (WinForms / WPF / etc.)
+
+
+
+Installation process:- 
+
+download dotnet from microsoft store 
+
+make a folder named Topbar and put these files inside that folder 
+then open vscode with topbar folder 
+and then run these commands 
+
+dotnet build 
+dotnet run 
