@@ -1,0 +1,69 @@
+<Window x:Class="TopBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TopBar" 
+        Background="Transparent">
+    <Window.Resources>
+        <Style x:Key="RoundedBorderStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="#AA111111"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </Window.Resources>
+    
+    <Border Style="{StaticResource RoundedBorderStyle}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Left: Date -->
+            <TextBlock x:Name="DateText" 
+                       Grid.Column="0" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Left"
+                       Margin="10,0,0,0"
+                       Foreground="White" 
+                       FontFamily="Segoe UI" 
+                       FontSize="12"
+                       Text="Tue, Dec 23"/>
+            
+            <!-- Center: Time -->
+            <TextBlock x:Name="TimeText" 
+                       Grid.Column="1" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center"
+                       Foreground="White" 
+                       FontFamily="Segoe UI" 
+                       FontSize="12"
+                       Text="00:00:00"/>
+            
+            <!-- Right: Metrics -->
+            <StackPanel Grid.Column="2" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right"
+                        Margin="0,0,10,0"
+                        Orientation="Horizontal">
+                <TextBlock x:Name="CpuText" 
+                           Foreground="White" 
+                           FontFamily="Segoe UI" 
+                           FontSize="12"
+                           Text="CPU 0%"/>
+                <TextBlock x:Name="RamText" 
+                           Foreground="White" 
+                           FontFamily="Segoe UI" 
+                           FontSize="12"
+                           Margin="8,0,0,0"
+                           Text="RAM 0%"/>
+                <TextBlock x:Name="GpuText" 
+                           Foreground="White" 
+                           FontFamily="Segoe UI" 
+                           FontSize="12"
+                           Margin="8,0,0,0"
+                           Text="GPU 0%"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
